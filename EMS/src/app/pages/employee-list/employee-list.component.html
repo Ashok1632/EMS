@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+<h2 style="text-align: center;"> Employee List</h2>
+<table class = "table table-striped table-bordered table-hover table-responsive"  >
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th>Dob</th>
+            <th>Joning Date</th>
+            <th>Project</th>
+            <th>Business Unit</th>
+            <th>Designation</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.firstName }} </td>
+            <td> {{ employee.lastName }} </td>
+            <td> {{ employee.emailId }} </td>
+            <td> {{ employee.dob}} </td>
+            <td> {{ employee.joining_date }} </td>
+            <td> {{ employee.project }} </td>
+            <td> {{ employee.business_unit }} </td>
+          
+            <td> {{ employee.designation }} </td>
+
+            
+          
+           
+            <td>
+                <button   (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button  (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+
+
+
+
+

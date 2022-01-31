@@ -1,0 +1,18 @@
+.card{
+    margin-top: 10px;
+    border: blue 1px solid;
+    width: 550;
+    padding: 45px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    background-color: aliceblue; 
+   
+}
+thead{
+  background-color:red;
+  color: white;
+}
+tbody{
+    background-color:white;
+}

@@ -1,0 +1,20 @@
+.card{
+    margin-top: 10px;
+    border: blue 1px solid;
+    width: 550px;
+    padding: 45px;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: aliceblue; 
+   
+}
+h1{
+    text-align: center;
+}
+/*.ng-valid{
+      border-left: 5px solid green;
+}
+.ng-invalid{
+    border-left: 5px solid red;
+}*/
