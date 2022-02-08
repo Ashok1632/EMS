@@ -65,7 +65,10 @@ public class EmployeeController {
 		employee.setProject(employeeDetails.getProject());
 		employee.setBusiness_unit(employeeDetails.getBusiness_unit());
 		employee.setDesignation(employeeDetails.getDesignation());
+		employee.setSalary(employeeDetails.getSalary());
+		
 		Employee updatedEmployee = employeeRepository.save(employee);
+
 		return ResponseEntity.ok(updatedEmployee);
 	}
 	

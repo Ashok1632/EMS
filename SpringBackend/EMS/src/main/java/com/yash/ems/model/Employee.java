@@ -38,9 +38,32 @@ public class Employee {
  @Column(name="business_unit")
   private String business_unit;
  
+ @Column(name="designation")
+ private String designation;
+
+ @Column(name="salary")
+ private Double salary;
+ 
+
 
  
- public String getDesignation() {
+
+
+
+
+
+
+public Double getSalary() {
+	return salary;
+}
+
+
+public void setSalary(Double salary) {
+	this.salary = salary;
+}
+
+
+public String getDesignation() {
 	return designation;
 }
 
@@ -48,8 +71,7 @@ public class Employee {
 public void setDesignation(String designation) {
 	this.designation = designation;
 }
-@Column(name="designation")
- private String designation;
+
  
 	public String getDob() {
 	return dob;
@@ -99,13 +121,21 @@ public void setJoining_date(String joining_date) {
 	}
 	
 	
-	public Employee(long id, String firstName, String lastName, String emailIdS) {
+	
+
+	public Employee(long id, String firstName, String lastName, String emailId, String dob, String joining_date,
+			String project, String business_unit, String designation, Double salary) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.emailId = emailId;
-		
+		this.dob = dob;
+		this.joining_date = joining_date;
+		this.project = project;
+		this.business_unit = business_unit;
+		this.designation = designation;
+		this.salary = salary;
 	}
 
 

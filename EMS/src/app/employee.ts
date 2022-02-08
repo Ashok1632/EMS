@@ -9,5 +9,6 @@ export class Employee {
     business_unit:string;
   
     designation:string;
-    
+    salary:number;
+    companyName:string;
 }

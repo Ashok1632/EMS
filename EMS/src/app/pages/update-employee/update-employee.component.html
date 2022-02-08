@@ -36,15 +36,15 @@
             <div class="col-sm-6">
                 <label>Date of birth</label>
                 <input type="date" class ="form-control" id = "lastName"
-                    [(ngModel)] = "employee.dob" name = "lastName" #dob="ngModel" required>
+                    [(ngModel)] = "employee.dob" name = "dob" #dob="ngModel" required>
                     <span *ngIf="dob.invalid && dob.touched">Date of Birth required</span>
     
             </div>
             <div class="col-sm-6">
                 <label> Joining Date</label>
-                <input type="date" class ="form-control" id = "lastName"
-                    [(ngModel)] = "employee.joining_date" name = "lastName" #joining_date="ngModel" required>
-                    <span *ngIf="dob.invalid && dob.touched">Joining Date required</span>
+                <input type="date" class ="form-control" id = "joining_date"
+                    [(ngModel)] = "employee.joining_date" name = "joining_date" #joining_date="ngModel" required>
+                    <span *ngIf="joining_date.invalid && joining_date.touched">Joining Date required</span>
     
             </div>
             </div>
@@ -53,34 +53,39 @@
                 <div class="col-sm-6">
                     <label>Project</label>
                     <input type="text" class ="form-control" id = "project"
-                        [(ngModel)] = "employee.project" name = "lastName" #project="ngModel">
+                        [(ngModel)] = "employee.project" name = "project" #project="ngModel">
                         <span *ngIf="project.invalid && project.touched">Project required</span>
     
                 </div>
     
                 <div class="col-sm-6">
                     <label>Business Unit</label>
-                    <input type="text" class ="form-control" id = "lastName"
-                        [(ngModel)] = "employee.business_unit" name = "lastName" #business_unit="ngModel" required>
+                    <input type="text" class ="form-control" id = "business_unit"
+                        [(ngModel)] = "employee.business_unit" name = "business_unit" #business_unit="ngModel" required>
                         <span *ngIf="business_unit.invalid && business_unit.touched">Business Unit required</span>
     
                 </div>
     
                 </div>
             
-    
+    <div class="row">
     
         
                     <div class="col-sm">
                         <label>Designation</label>
-                        <input type="text" class ="form-control" id = "lastName"
-                            [(ngModel)] = "employee.designation" name = "lastName" #designation="ngModel" required>
+                        <input type="text" class ="form-control" id = "designation"
+                            [(ngModel)] = "employee.designation" name = "designation" #designation="ngModel" required>
                             <span *ngIf="designation.invalid && designation.touched">Designation required</span>
                     </div>
+                    <div class="col-sm-6">
+                        <label>Salary</label>
+                        <input type="text" class ="form-control" id = "salary"
+                            [(ngModel)] = "employee.salary" name = "salary" #salary="ngModel" required>
+                            
+                    </div>
     
-    
-        
-    
+        </div>
+      
         <br>
         <div class="text-center">
             <button class = "btn btn-success" type ="submit"  [disabled]='update.invalid'>Submit</button>
