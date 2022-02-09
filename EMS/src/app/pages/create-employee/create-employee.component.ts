@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from 'src/app/employee';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-create-employee',
   templateUrl: './create-employee.component.html',
@@ -21,7 +21,8 @@ export class CreateEmployeeComponent implements OnInit {
     this.employeeService.createEmployee(this.employee).subscribe( data =>{
       console.log(data);
      // this.goToEmployeeList();
-      alert("data save sucessfully");
+     // alert("data save sucessfully");
+     Swal.fire('Successfully Register  done!!');
     },
     error => console.log(error));
   }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Employee } from 'src/app/employee'
 import { EmployeeService } from 'src/app/services/employee.service'
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-employee-list',
   templateUrl: './employee-list.component.html',
@@ -36,6 +37,7 @@ export class EmployeeListComponent implements OnInit {
     this.employeeService.deleteEmployee(id).subscribe( data => {
       console.log(data);
       this.getEmployees();
+      Swal.fire('Successfully deleted!!');
     })
   }
 }

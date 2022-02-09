@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EmployeeService } from 'src/app/services/employee.service';
 import { Employee } from 'src/app/employee';
 import { ActivatedRoute, Router } from '@angular/router';
-
+import Swal from 'sweetalert2';
 @Component({
   selector: 'app-update-employee',
   templateUrl: './update-employee.component.html',
@@ -21,13 +21,14 @@ export class UpdateEmployeeComponent implements OnInit {
 
     this.employeeService.getEmployeeById(this.id).subscribe(data => {
       this.employee = data;
+     
     }, error => console.log(error));
   }
 
   onSubmit(){
     this.employeeService.updateEmployee(this.id, this.employee).subscribe( data =>{
       this.goToEmployeeList();
-      
+      Swal.fire('Employee Data Updated!!'); 
     }
     , error => console.log(error));
   }
